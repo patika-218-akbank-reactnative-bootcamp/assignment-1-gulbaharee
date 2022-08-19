@@ -5,13 +5,13 @@ const Stories = () => {
     return (
             <View style={styles.stories}>
                 <Users name={"Your story"} />
-                <Users name={"itsjane"} />
-                <Users name={"michael"} />
-                <Users name={"miamia"} />
-                <Users name={"heygirl"} />
-                <Users name={"pabloherre"} />
-                <Users name={"thejunee"} />
-                <Users name={"lalalala"} />
+                <Users name={"rachel"} />
+                <Users name={"sierra"} />
+                <Users name={"monica"} />
+                <Users name={"chandler"} />
+                <Users name={"ross"} />
+                <Users name={"sena"} />
+                <Users name={"osmansafiye"} />
             </View>
     )
 }

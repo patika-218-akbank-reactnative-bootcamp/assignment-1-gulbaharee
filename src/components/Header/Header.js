@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Image } from 'react-native';
 import IconAntDesign from 'react-native-vector-icons/AntDesign';
 import Stories from './Stories';
 
@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <View>
             <View style={styles.container}>
-                <Text style={styles.headerText}>Instagram</Text>
+                <Image source={require('./Instagram-Logo.png')} style={{ width: 120, height: 60 }}/>
                 <Icons />
             </View>
             <Stories/>
@@ -32,6 +32,8 @@ const styles = StyleSheet.create(
             height: 100,
             display: "flex",
             flexDirection: "row",
+            justifyContent:"center",
+            padding:10,
         },
         headerText: {
             fontSize: 30,
@@ -44,8 +46,8 @@ const styles = StyleSheet.create(
             paddingLeft: 100,
         },
         icon: {
-            paddingTop: 40,
-            paddingLeft: 15,
+            paddingTop: 20,
+            paddingLeft: 20,
         }
     }
 );

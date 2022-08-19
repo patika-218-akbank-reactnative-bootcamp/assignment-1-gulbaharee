@@ -1,23 +1,25 @@
 import React from "react";
 import { View, StyleSheet, ScrollView, Text } from 'react-native';
 import IconEntypo from 'react-native-vector-icons/Entypo';
+import Captions from './Captions';
 
 const Posts = () => {
     return (
         <ScrollView>
-            <Post name="heyjane" />
-            <Post />
-            <Post />
+            <Post name="heyjane" caption={"hi!"} liked={"sierra"}/>
+            <Post name ="sierra"caption={"happy sunday!"} liked={"chandler"}/>
+            <Post name="sena" caption={"hi!"} liked={"sierra"}/>
         </ScrollView>
 
     )
 };
 
-const Post = ({ name }) => {
+const Post = ({ name,liked,caption }) => {
     return (
         <View style={styles.postContainer}>
             <PostHeader name={name} />
             <View style={styles.postImage}></View>
+            <Captions user={name} caption={caption} userLiked={liked}/>
         </View>
     )
 };
@@ -37,22 +39,7 @@ const PostHeader = ({ name }) => {
     )
 };
 
-const Caption = ({ }) => {
-    return (
-        <View></View>
-    )
-}
-const PostIcons = ({ }) => {
-    return (
-        <View></View>
-    )
-}
 
-const PostLikes = ({ }) => {
-    return (
-        <View></View>
-    )
-}
 
 const styles = StyleSheet.create(
     {
@@ -67,7 +54,7 @@ const styles = StyleSheet.create(
             marginLeft: 210,
         },
         icon: {
-            
+            paddingLeft:10,
         },
         postHeader: {
             height: 60,
