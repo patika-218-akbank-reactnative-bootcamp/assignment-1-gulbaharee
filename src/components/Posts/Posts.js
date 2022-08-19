@@ -6,20 +6,26 @@ import Captions from './Captions';
 const Posts = () => {
     return (
         <ScrollView>
-            <Post name="heyjane" caption={"hi!"} liked={"sierra"}/>
-            <Post name ="sierra"caption={"happy sunday!"} liked={"chandler"}/>
-            <Post name="sena" caption={"hi!"} liked={"sierra"}/>
+            <Post name="heyjane" caption={"hi!"} liked={"sierra"} />
+            <Post name="sierra" caption={"happy sunday!"} liked={"chandler"} />
+            <Post name="sena" caption={"hi!"} liked={"sierra"} />
         </ScrollView>
 
     )
 };
 
-const Post = ({ name,liked,caption }) => {
+const Post = ({ name, liked, caption }) => {
     return (
         <View style={styles.postContainer}>
             <PostHeader name={name} />
             <View style={styles.postImage}></View>
-            <Captions user={name} caption={caption} userLiked={liked}/>
+            <Captions user={name} caption={caption} userLiked={liked} />
+            <View
+                style={{
+                    borderBottomColor: 'gray',
+                    borderBottomWidth: 0.4,
+                }}
+            />
         </View>
     )
 };
@@ -48,13 +54,13 @@ const styles = StyleSheet.create(
             flexDirection: "row",
             alignItems: 'center',
         },
-        postHeaderIcon:{
-            display:"flex",
-            justifyContent:"flex-end",
+        postHeaderIcon: {
+            display: "flex",
+            justifyContent: "flex-end",
             marginLeft: 210,
         },
         icon: {
-            paddingLeft:10,
+            paddingLeft: 10,
         },
         postHeader: {
             height: 60,

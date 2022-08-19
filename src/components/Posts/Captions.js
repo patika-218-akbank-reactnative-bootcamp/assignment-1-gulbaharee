@@ -1,50 +1,53 @@
 import IconFeather from 'react-native-vector-icons/Feather';
 import React from "react";
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import { View, StyleSheet, ScrollView, Text, Image } from 'react-native';
+import PostIcons from './PostIcons';
 
 const Captions = ({ user, caption, userLiked }) => {
     return (
         <View>
             <PostIcons />
             <PostLikes name={userLiked} />
-            <Caption name={user, caption} />
+            <Caption user={user} caption={caption}/>
         </View>
     )
 }
 
 const Caption = ({ user, caption }) => {
-    <View style={styles.captionContainer}>
-        <Text>{user}</Text>
-        <Text>{caption}</Text>
-    </View>
-}
-
-const PostIcons = ({ }) => {
     return (
-        <View style={styles.postIcons}>
-            <IconFeather style={styles.icon} name="heart" size={25} />
-            <IconFeather style={styles.icon} name="message-circle" size={25} />
-            <IconFeather style={styles.icon} name="send" size={25} />
+        <View style={styles.captionContainer}>
+            <Text style={styles.userText}>{user}</Text>
+            <Text style={styles.captionText}>{caption}</Text>
         </View>
     )
+
 }
 
 const PostLikes = ({ name }) => {
     return (
         <View style={styles.likeContainer}>
-            <View >
-                <Image />
-                <Image />
-                <Image />
+            <View style={{ display: "flex", flexDirection: "row" }}>
+                <LikesImage />
+                <LikesImage />
+                <LikesImage />
             </View>
-            <Text>{name} and other people liked</Text>
+            <Text style={{ paddingLeft: 15 }}>{name} and other people liked</Text>
         </View>
     )
 }
 
-const Image = () => {
-    <View style={styles.imageStyle}></View>
+const LikesImage = () => {
+    return (
+        <Image style={{
+            width: 20,
+            height: 20,
+            borderRadius: 32,
+            backgroundColor: "rgba(0,0,0,0.3)",
+            marginRight: -10,
+        }} />
+    )
 }
+
 export default Captions;
 
 const styles = StyleSheet.create(
@@ -52,14 +55,6 @@ const styles = StyleSheet.create(
         container: {
             display: "flex",
             flexDirection: "row",
-        },
-        postIcons: {
-            display: "flex",
-            flexDirection: "row",
-            margin: 5,
-        },
-        icon: {
-            paddingLeft: 10,
         },
         imageStyle: {
             backgroundColor: "gray",
@@ -70,12 +65,22 @@ const styles = StyleSheet.create(
         likeContainer: {
             display: "flex",
             flexDirection: "row",
-            margin: 5,
+            margin: 8,
+            paddingLeft:4,
         },
         captionContainer: {
             display: "flex",
             flexDirection: "row",
             margin: 5,
+        },
+        userText:{
+            fontWeight: "600",
+            fontSize: 14,
+            paddingLeft:5,
+        },
+        captionText:{
+            fontSize: 14,
+            paddingLeft:10,
         }
     }
 );

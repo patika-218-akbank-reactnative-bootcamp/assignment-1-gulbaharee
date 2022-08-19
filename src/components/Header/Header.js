@@ -18,9 +18,9 @@ const Header = () => {
 const Icons = () => {
     return (
         <View style={styles.icons}>
-            <IconAntDesign style={styles.icon} name="plussquareo" size={20} />
-            <IconAntDesign style={styles.icon} name="hearto" size={20} />
-            <IconAntDesign style={styles.icon} name="message1" size={20} />
+            <IconAntDesign style={styles.icon} name="plussquareo" size={25} />
+            <IconAntDesign style={styles.icon} name="hearto" size={25} />
+            <IconAntDesign style={styles.icon} name="message1" size={25} />
         </View>
     )
 }
