@@ -38,7 +38,7 @@ const PostLikes = ({ name }) => {
 
 const LikesImage = () => {
     return (
-        <Image style={{
+        <Image source={{uri:"https://picsum.photos/200/200"}} style={{
             width: 20,
             height: 20,
             borderRadius: 32,

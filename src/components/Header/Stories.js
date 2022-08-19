@@ -1,25 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { LinearGradient } from 'react-native-linear-gradient';
 
 const Stories = () => {
     return (
-            <View style={styles.stories}>
-                <Users name={"Your story"} />
-                <Users name={"rachel"} />
-                <Users name={"sierra"} />
-                <Users name={"monica"} />
-                <Users name={"chandler"} />
-                <Users name={"ross"} />
-                <Users name={"sena"} />
-                <Users name={"osmansafiye"} />
-            </View>
+        <View style={styles.stories}>
+            <Users name={"Your story"} />
+            <Users name={"rachel"} />
+            <Users name={"sierra"} />
+            <Users name={"monica"} />
+            <Users name={"chandler"}  />
+        </View>
     )
 }
 
-const Users = ({ name }) => {
+const Users = ({ name , img}) => {
     return (
         <View style={styles.storyContainer}>
-            <View style={styles.userImage}></View>
+            <Image source={{uri:"https://picsum.photos/200/200"}} style={styles.userImage}/>
             <Text style={styles.username}>{name}</Text>
         </View>
 
@@ -32,7 +30,7 @@ const styles = StyleSheet.create({
         height: 70,
         bottom: 20,
         borderRadius: 50,
-        backgroundColor: "black",
+
     },
     stories: {
         display: 'flex',

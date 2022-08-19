@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import { View, StyleSheet, ScrollView, Text,Image } from 'react-native';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import Captions from './Captions';
 
@@ -9,6 +9,9 @@ const Posts = () => {
             <Post name="heyjane" caption={"hi!"} liked={"sierra"} />
             <Post name="sierra" caption={"happy sunday!"} liked={"chandler"} />
             <Post name="sena" caption={"hi!"} liked={"sierra"} />
+            <Post name="sare" caption={"hola!"} liked={"sierra"} />
+            <Post name="jane" caption={"hello world!"} liked={"sierra"} />
+            <Post name="pelin" caption={"hi!"} liked={"sierra"} />
         </ScrollView>
 
     )
@@ -34,7 +37,7 @@ const PostHeader = ({ name }) => {
     return (
         <View style={styles.postHeader}>
             <View style={styles.postHeaderUser}>
-                <View style={styles.userImage}></View>
+                <Image source={{uri:"https://picsum.photos/200/200"}}  style={styles.userImage}/>
                 <Text style={styles.username}>{name}</Text>
             </View>
             <View style={styles.postHeaderIcon}>
