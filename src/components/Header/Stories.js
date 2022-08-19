@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
 const Stories = () => {
     return (
-        <ScrollView horizontal>
             <View style={styles.stories}>
                 <Users name={"Your story"} />
                 <Users name={"itsjane"} />
@@ -14,7 +13,6 @@ const Stories = () => {
                 <Users name={"thejunee"} />
                 <Users name={"lalalala"} />
             </View>
-        </ScrollView>
     )
 }
 
@@ -32,7 +30,7 @@ const styles = StyleSheet.create({
     userImage: {
         width: 70,
         height: 70,
-        bottom: 40,
+        bottom: 20,
         borderRadius: 50,
         backgroundColor: "black",
     },
@@ -47,7 +45,7 @@ const styles = StyleSheet.create({
         marginLeft: 15,
     },
     username: {
-        bottom: 30,
+        bottom: 10,
     }
 });
 export default Stories;
